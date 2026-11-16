@@ -1,0 +1,16 @@
+[project]
+name = "comfyui-jinyeguiyuan"
+description = "A lightweight VRAM/memory cleanup node for ComfyUI - 🍂 叶落归仓"
+version = "1.0.0"
+license = {file = "LICENSE"}
+authors = [{name = "JinYeGuiCang contributors"}]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/qingyuanjc/ComfyUI-JinYeGuiCang"
+
+[tool.comfy]
+PublisherId = "qingyuanjc"
+DisplayName = "🍂 叶落归仓"
+Icon = ""

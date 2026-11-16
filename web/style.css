@@ -1,0 +1,21 @@
+/* 🍂 叶落归仓 — 极轻量外观：低饱和深灰配色 + 开关点击热区外扩。
+   全部命中不到时自动降级为 ComfyUI 原生外观，功能不受任何影响。 */
+
+/* 1) 低饱和深灰配色：只调整本节点，作用域靠 title 文本锚定，避免波及其它节点。 */
+.litegraph .node.jyjc-hooked {
+    --jyjc-bg: #2e2f31;
+    --jyjc-title: #3a3c3e;
+    --jyjc-text: #d7d9db;
+}
+
+/* 2) 开关点击热区外扩：给布尔控件一个透明内边距，视觉不变、命中变大。
+   每行开关之间保留足够间距，外扩量控制在 2px，绝不碰到相邻开关。 */
+.litegraph .node.jyjc-hooked .jyjc-boolean-toggle {
+    position: relative;
+}
+.litegraph .node.jyjc-hooked .jyjc-boolean-toggle::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    cursor: pointer;
+}
